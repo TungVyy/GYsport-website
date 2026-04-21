@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="21047931" content="Nguyễn Thị Tùng Vy" />
+    <title>GYSPORT | CỬA HÀNG DỤNG CỤ THỂ THAO CAO CẤP</title>
+
+    <link rel="stylesheet" href="../css/stylehome.css" />
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <style>
+      .slider {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slides img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        animation: fadeSlide 9s infinite;
+      }
+
+      .slides img:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .slides img:nth-child(2) {
+        animation-delay: 3s;
+      }
+      .slides img:nth-child(3) {
+        animation-delay: 6s;
+      }
+
+      @keyframes fadeSlide {
+        0% {
+          opacity: 0;
+        }
+        5% {
+          opacity: 1;
+        }
+        30% {
+          opacity: 1;
+        }
+        35% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      /* ______________________________ */
+
+      .content-menu {
+        height: 70px;
+        width: 100%;
+        background: white;
+        display: flex;
+        align-items: center;
+      }
+
+      .content-menu ul {
+        list-style-type: none;
+        display: flex;
+      }
+
+      .content-menu li {
+        text-align: center;
+      }
+
+      .content-menu a {
+        text-decoration: none;
+        color: #7c8cf8;
+      }
+
+      .content-menu img {
+        width: 5%;
+        height: auto;
+        margin-top: 5px;
+      }
+
+      /* ______________________________ */
+      .content-sports {
+        padding: 20px;
+      }
+
+      .content-sports a {
+        text-decoration: none;
+        color: #2d3436;
+      }
+
+      .content-sports a:hover {
+        font-weight: bolder;
+      }
+
+      .sport-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+        gap: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 2px solid #7c8cf8;
+        border-bottom: 2px solid #7c8cf8;
+      }
+
+      .sport-item {
+        text-align: center;
+      }
+
+      .sport-item img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 5px solid #7c8cf8;
+      }
+
+      .sport-item p {
+        margin-top: 10px;
+        font-size: 16px;
+      }
+
+      /* ______________________________ */
+      .content-products {
+        height: 40%;
+        padding: 20px;
+      }
+
+      .content-products a {
+        text-decoration: none;
+        color: #2d3436;
+      }
+
+      .content-products a:hover {
+        font-weight: bolder;
+      }
+
+      .product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+        gap: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 2px solid #7c8cf8;
+        border-bottom: 2px solid #7c8cf8;
+      }
+
+      .product-item {
+        text-align: left;
+      }
+
+      .product-item img {
+        width: 100%;
+        aspect-ratio: 2/2.5;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .price-cart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .price {
+        font-weight: bold;
+        color: #2d3436;
+      }
+
+      .cart {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .cart:hover {
+        transform: scale(1.2);
+      }
+
+      .product-name {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="title">
+          <div class="logo">
+            <a href="../html/home.html">
+              <img src="../img/logoGYs.jpg" alt="GYsportlogo" />
+            </a>
+          </div>
+
+          <div class="search">
+            <input
+              class="search-box"
+              type="search"
+              placeholder="Tìm kiếm sản phẩm, môn thể thao . . ."
+            />
+            <a href="">
+              <img
+                src="../img/search.jpg"
+                alt="search-icon"
+                class="search-icon"
+              />
+            </a>
+          </div>
+
+          <div class="login">
+            <ul>
+              <li class="login-l">
+                <a href="../html/login.html" class="login-l-i">
+                  <img src="../img/user.png" alt="cart" />
+                </a>
+                <a href="../html/login.html" class="login-l-i">Đăng nhập</a>
+              </li>
+              <li class="login-l">
+                <a href="../html/cart.html" class="login-l-i">
+                  <img src="../img/shopping-cart.png" alt="cart" />
+                </a>
+                <a href="../html/cart.html" class="login-l-i">Giỏ hàng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li class="menu-list">
+              <a href="../html/home.html" class="menu-list-item">TRANG CHỦ</a>
+            </li>
+            <li class="menu-list">
+              <a href="../html/products.html" class="menu-list-item"
+                >DANH SÁCH SẢN PHẨM</a
+              >
+              <ul class="submenu">
+                <li><a href="#">DỤNG CỤ LUYỆN TẬP</a></li>
+                <li><a href="#">DỤNG CỤ THEO MÔN THỂ THAO</a></li>
+                <li><a href="#">THIẾT BỊ THEO DÕI</a></li>
+                <li><a href="#">PHỤ KIỆN THỂ THAO</a></li>
+                <li><a href="#">ĐỒ BẢO HỘ</a></li>
+              </ul>
+            </li>
+            <li class="menu-list">
+              <a href="../html/sports.html" class="menu-list-item"
+                >MÔN THỂ THAO</a
+              >
+              <ul class="submenu">
+                <li><a href="#">BƠI LỘI</a></li>
+                <li><a href="#">ĐI BỘ, CHẠY BỘ</a></li>
+                <li><a href="#">LEO NÚI</a></li>
+                <li><a href="#">ĐẠP XE</a></li>
+                <li><a href="#">GYM</a></li>
+                <li><a href="#">YOGA, PLATES</a></li>
+                <li><a href="#">THỂ THAO ĐỒNG ĐỘI</a></li>
+                <li><a href="#">THỂ THAO DÙNG VỢT</a></li>
+              </ul>
+            </li>
+            <li class="menu-list">
+              <a href="../html/support.html" class="menu-list-item">HỖ TRỢ</a>
+            </li>
+            <li class="menu-list">
+              <a href="../html/about.html" class="menu-list-item">GIỚI THIỆU</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <div class="slider">
+          <div class="slides">
+            <img src="../img/banner01.jpg" alt="banner01" />
+            <img src="../img/banner02.jpg" alt="banner02" />
+            <img src="../img/banner03.jpg" alt="banner03" />
+          </div>
+        </div>
+        <div class="content-menu">
+          <ul>
+            <li>
+              <a href="">
+                <img src="../img/delivery-truck.png" alt="delivery" />
+                <div>
+                  <b>Freeship từ 499,000 vnđ</b>
+                  <br />
+                  <u style="color: #2d3436">tối đa 100,000 vnđ</u>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../img/reward.png" alt="reward" />
+                <div>
+                  <b>Chương trình tích điểm</b>
+                  <br />
+                  <u style="color: #2d3436">nhận điểm đổi quà</u>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="../img/guaranteed.png" alt="guaranteed" />
+                <div>
+                  <b>Bảo hành</b>
+                  <br />
+                  <u style="color: #2d3436">từ 2 năm</u>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="content-sports">
+          <h1>Môn Thể Thao Phổ Biến</h1>
+          <div class="sport-list">
+            <div class="sport-item">
+              <a href="../html/swim.html">
+                <img src="../img/swim.jpg" alt="swim" />
+                <p>Bơi Lội</p>
+              </a>
+            </div>
+            <a href="#">
+              <div class="sport-item">
+                <img src="../img/run.jpg" alt="run" />
+                <p>Chạy Bộ</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sport-item">
+                <img src="../img/cycle.jpg" alt="cycle" />
+                <p>Đạp Xe</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sport-item">
+                <img src="../img/badminton.jpg" alt="badminton" />
+                <p>Cầu Lông</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sport-item">
+                <img src="../img/football.jpg" alt="football" />
+                <p>Bóng Đá</p>
+              </div>
+            </a>
+            <a href="#">
+              <div class="sport-item">
+                <img src="../img/gym.jpg" alt="gym" />
+                <p>Gym</p>
+              </div>
+            </a>
+            <a href="#"
+              ><div class="sport-item">
+                <img src="../img/yoga.jpg" alt="yoga" />
+                <p>Yoga và Pilates</p>
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="content-products">
+          <h1>Sản Phẩm Được Tìm Kiếm Nhiều Nhất</h1>
+          <div class="product-list">
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-products">
+          <h1>Sản Phẩm Bán Chạy</h1>
+          <div class="product-list">
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+            <div class="product-item">
+              <a href="../html/swim.html">
+                <img src="../img/vot.jpg" alt="vot" />
+              </a>
+
+              <div class="product-info">
+                <div class="price-cart">
+                  <span class="price">179,000 vnđ</span>
+                  <a href="#">
+                    <img
+                      src="../img/shopping-cart.png"
+                      alt="cart"
+                      class="cart"
+                    />
+                  </a>
+                </div>
+
+                <p class="product-name">
+                  Vợt cầu lông trẻ em nguyễn thị tùng vy
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="mot">
+          <a href="../html/home.html">
+            <h3>GYSPORT - Cửa hàng thiết bị dụng cụ thể thao</h3>
+          </a>
+          <div class="text">
+            Nơi cung cấp dụng cụ thể thao chất lượng, đáp ứng đa dạng nhu cầu
+            luyện tập và thi đấu.
+            <br />
+            Cam kết mang đến sản phẩm uy tín cùng trải nghiệm mua sắm tiện lợi
+            cho khách hàng.
+            <br />
+            <b
+              >Địa chỉ trụ sở: Số 15, đường xxx, phường xxx, thành phố Hồ Chí
+              Minh</b
+            >
+          </div>
+        </div>
+        <div class="hai">
+          <a href="../html/support.html">
+            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+          </a>
+          <ul>
+            <li><a href="../html/support.html">Liên hệ CSKH</a></li>
+            <li><a href="../html/support.html">Hướng dẫn đặt hàng</a></li>
+            <li><a href="../html/support.html">Đổi trả bảo hành</a></li>
+          </ul>
+        </div>
+        <div class="ba">
+          <a href="../html/legal.html">
+            <h4>PHÁP LÝ</h4>
+          </a>
+          <ul>
+            <li><a href="../html/legal.html">Chính sách mua hàng</a></li>
+            <li><a href="../html/legal.html">Chính sách bảo mật</a></li>
+            <li><a href="../html/legal.html">Bản công bố sản phẩm</a></li>
+          </ul>
+        </div>
+        <div class="bon">
+          <h4>THEO DÕI CHÚNG TÔI</h4>
+          <a href="#">
+            <img src="../img/facebook.png" alt="iconf" />
+          </a>
+          <a href="#">
+            <img src="../img/instagram.png" alt="iconi" />
+          </a>
+          <a href="#">
+            <img src="../img/email.png" alt="icone" />
+          </a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
